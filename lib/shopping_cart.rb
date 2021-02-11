@@ -22,14 +22,10 @@ class ShoppingCart
   end
 
   def is_full?
-    if total_number_of_products >= capacity
-      true
-    else
-      false
-    end
+    total_number_of_products >= capacity
   end
 
-  def test_products_by_category(category)
+  def products_by_category(category)
     @products.select do |product|
       product.category == category
     end
@@ -49,5 +45,5 @@ class ShoppingCart
     @products.group_by do |product|
       product.category
     end
-  end 
+  end
 end

@@ -87,7 +87,7 @@ class ShoppingCartTest < Minitest::Test
 
     result = [product1, product3]
 
-    assert_equal result, cart.test_products_by_category(:paper)
+    assert_equal result, cart.products_by_category(:paper)
   end
 
   def test_percentage_occupied
@@ -131,6 +131,6 @@ class ShoppingCartTest < Minitest::Test
 
     result = {:meat => [product2], :paper => [product1, product3], :produce => [product4]}
 
-    assert_equal result, cart.product_breakdown 
+    assert_equal result, cart.product_breakdown
   end
 end
